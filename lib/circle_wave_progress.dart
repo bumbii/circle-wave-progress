@@ -5,27 +5,21 @@ import 'dart:math';
 import 'package:flutter/material.dart';
 
 class CircleWaveProgress extends StatefulWidget {
-  final double width;
-  final double height;
+  final double size;
   final Color backgroundColor;
   final Color waveColor;
   final Color borderColor;
   final borderWidth;
-  final double opacity;
   final double progress;
 
   CircleWaveProgress(
-      {this.width = 200.0,
-      this.height = 200.0,
+      {this.size = 200.0,
       this.backgroundColor = Colors.blue,
       this.waveColor = Colors.white,
       this.borderColor = Colors.white,
       this.borderWidth = 10.0,
-      this.opacity = 1.0,
       this.progress = 50.0})
-      : assert(opacity >= 0 && opacity <= 1,
-            'Valid range of opacity value is [0.0, 1.0]'),
-        assert(progress >= 0 && progress <= 100,
+      :assert(progress >= 0 && progress <= 100,
             'Valid range of progress value is [0.0, 100.0]');
 
   @override
@@ -58,8 +52,8 @@ class _WaveWidgetState extends State<CircleWaveProgress>
   @override
   Widget build(BuildContext context) {
     return Container(
-      width: widget.width,
-      height: widget.height,
+      width: widget.size,
+      height: widget.size,
       child: ClipPath(
         clipper: CircleClipper(),
         child: AnimatedBuilder(

@@ -27,12 +27,12 @@ class StatelessWidgetDemo extends StatelessWidget {
             backgroundColor: Colors.teal,
             body: Center(
                 child: CircleWaveProgress(
-              width: 300,
-              height: 300,
+              size: 300,
               borderWidth: 10.0,
               backgroundColor: Colors.transparent,
               borderColor: Colors.white,
               waveColor: Colors.white54,
+              progress: 50,
             ))));
   }
 }
