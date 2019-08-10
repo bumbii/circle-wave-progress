@@ -3,7 +3,7 @@
 1. Add this to your package's pubspec.yaml file:
 ```
 dependencies:
-  circle_wave_progress: ^x.x.x
+  circle_wave_progress: ^0.0.4
 ```
 
 2. Install it: You can install packages from the command line:
